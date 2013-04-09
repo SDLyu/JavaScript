@@ -46,9 +46,9 @@ Javascript中，要創建物件有以下三種方法<br />
 		var B = Object.creat(A);           //物件B繼承了物件A的特性
 		var Z = Object.creat(Y, {x : 1});  //物件Z繼承了物件Y的特性，且有新特性x
 
-### new與Object.creat()的差別:
+	**使用`new`與`Object.creat()`實例化的差別:**
 
-使用`new`方法會實例化`A`，而使用`Object.creat`方法不會實例化`A`(即不會呼叫到`constroctor A()`)。這樣的好處在於可讓程式碼更清楚、簡單，能避免建構式被大量呼叫所造成的資源不足問題。
+	使用`new`方法會實例化`A`，而使用`Object.creat`方法不會實例化`A`(即不會呼叫到`constroctor A()`)。這樣的好處在於可讓程式碼更清楚、簡單，能避免建構式被大量呼叫所造成的資源不足問題。
 
 
 這三種方法是JavaScript中最基礎的創建方法，其它創建方法也都是從這三種衍伸的，比如:工廠方法。
