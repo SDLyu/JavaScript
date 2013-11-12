@@ -63,6 +63,10 @@ function parent(){
 	//...
 }
 
+parent.prototype.parentcall = function(){
+	cosole.log("parent!")
+}
+
 function child(){
 	//...
 }
@@ -72,3 +76,10 @@ child.prototype.constructor = child;
 ```
 
 將 `child` 類別的 `prototype` 屬性指向父類別的實體，讓 `child` 繼承 `parent`，由於子類別的 `prototype` 屬性已經完全指向父類別實體，所以要手動恢復。
+
+```javascript
+var peter = new child();
+peter.parentcall();  // output parent!
+```
+
+創建出 `peter` 後呼叫 `parentcall()` 方法。由於 `child` 裡沒有 `parentcall` 方法，所以會沿著原型鍊查找到 `parent` 的 `parentcall()`。藉由原型鍊查找的方式來達到繼承。
